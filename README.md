@@ -21,4 +21,6 @@ Introduzione alla programmazione avanzata utilizzando Angular | 8
 **Preparazione all'esame finale** | 
 Ripasso generale ed esercitazioni sugli argomenti del corso | 4
 
+## Snippet ed esempi JS
 
+* [Esempi Corso Javascript](https://github.com/maboglia/Corso-HTML5-Javascript/tree/master/esempi)
