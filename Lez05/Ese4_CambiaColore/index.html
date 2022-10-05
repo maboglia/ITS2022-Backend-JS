@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colori</title>
+</head>
+<body>
+    
+    <h1>Colori</h1>
+
+    <select name="colori" id="colori">
+        <option value=''>scegli colore</option>
+    </select>
+
+    <script src="colori.js"></script>
+
+    <script>
+        const TENDINA = document.getElementById('colori')
+
+        for (const colore of colori) {
+            console.log(colore.nome);
+            const OPTION = document.createElement('option')
+            OPTION.value = colore.codice
+            OPTION.textContent = colore.nome
+            //OPTION.addEventListener('click', (e)=>console.log(e))
+            TENDINA.appendChild(OPTION)
+        }
+
+        TENDINA.addEventListener('change', e => document.body.style.backgroundColor = e.target.value)
+
+
+    </script>
+
+
+</body>
+</html>
