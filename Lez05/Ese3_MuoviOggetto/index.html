@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana</title>
+    <style>
+        #contenitore {width: 600px;height: 200px; border: 1px solid gray;}
+        #contenitore img {width: 190px;height: 190px;position: relative;}
+    </style>
+</head>
+<body>
+    <div id="contenitore">
+        <img src="banana.png" alt="banana" id="banana">
+    </div>
+
+    <div id="pulsanti">
+        <button id="btnPlay">play</button>
+        <button id="btnStop">stop</button>
+        <button id="btnAccelera">accelera</button>
+    </div>
+
+    <script>
+        const banana = document.getElementById('banana')
+        const btnPlay = document.getElementById('btnPlay')
+        const btnStop = document.getElementById('btnStop')
+        const btnAccelera = document.getElementById('btnAccelera')
+        let posizione = 0
+        let animazione;
+        let velocita = 1500;
+        console.log(banana);
+
+        function muovi(){
+            console.log(banana.style.left);
+            posizione += 10
+            banana.style.left = posizione+'px'
+        }
+
+        function accelera() {
+            velocita -= 100
+            stop()
+            start()
+            console.log(velocita);
+        }
+        function start() {
+            animazione = setInterval(muovi, velocita)
+            if(posizione >= 410)
+                stop()
+        }
+
+        function stop() {
+            clearInterval(animazione)
+        }
+
+        //animazione = setInterval(muovi, 1500)
+
+        btnPlay.addEventListener('click', () => start())
+        btnStop.addEventListener('click', () => stop())
+        btnAccelera.addEventListener('click', () => accelera())
+        
+
+    </script>
+
+</body>
+</html>
