@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="" method="post">
+
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+
+        <div id="feedback"></div>
+
+        <input type="submit" value="Login">
+    </form>
+
+    <script>
+        const USERNAME = document.querySelector('#username')
+        const PASSWORD = document.querySelector('#password')
+
+        USERNAME.addEventListener('focus', () => {console.log();})
+        PASSWORD.addEventListener('focus', faiQualcosa)
+
+        USERNAME.addEventListener('blur', faiQualcosa)
+        PASSWORD.addEventListener('blur', faiQualcosa)
+
+        function faiQualcosa(a, b, c) {
+
+            console.log(arguments);
+            console.log("funge");
+        }
+
+    </script>
+
+
+</body>
+</html>

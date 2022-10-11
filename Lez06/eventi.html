@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">schiacciami</button>
+
+    <div id="demo" class="mioDiv"></div>
+
+<script>
+
+    function saluto(nome) {
+        console.log(`Ciao ${nome}`);
+    }
+
+    document.querySelector('#btn').onclick = () => saluto('pippo')
+    
+    document.querySelector('#btn').addEventListener('mouseenter', 
+        () => {
+            console.log("hai appoggiato il mouse sul bottone");
+        }
+    )
+
+    document.querySelector('#btn').addEventListener('mouseout', 
+        () => {
+            console.log("hai spostato il mouse dal bottone");
+        }
+    )
+
+</script>
+
+
+</body>
+</html>
