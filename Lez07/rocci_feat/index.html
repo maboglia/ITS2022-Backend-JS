@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+ <script>
+    const URL = 'https://jsonplaceholder.typicode.com/users';
+   
+    const UL = document.createElement('ul');
+
+    fetch(URL)
+        .then(luca=>luca.json())
+        .then(lucajs=>{
+        for (const utente of lucajs) {
+            const LI = document.createElement('li');
+            LI.textContent= utente.name;
+            LI.addEventListener('click',function(e){
+                //console.log(e.target);
+                //console.log(this);
+                dettaglioUtente(utente);
+            })
+            UL.appendChild(LI);
+           // console.log(utente.name);
+        }
+            document.body.appendChild(UL);
+        })
+ 
+     function  dettaglioUtente(utente){
+        fetch(URL+'/'+utente.id)
+        .then(jsondetail=>jsondetail.json())
+        .then(jsDetail=> showUser(jsDetail))
+     }
+     function showUser(user){
+        const DIV = document.createElement('div');
+        const ULDETAIL = document.createElement('ul');
+
+        const H1 = document.createElement('h1');
+        H1.textContent=user.name;
+        for (const key in user) {
+            const LIDETAIL = document.createElement('li');
+            LIDETAIL.textContent= key+' : '+user[key];
+            ULDETAIL.appendChild(LIDETAIL);
+
+        }
+        DIV.appendChild(H1);
+        DIV.appendChild(ULDETAIL);
+        //UL.appendChild(DIV);
+        document.body.insertBefore(DIV,document.querySelector('div'));
+     }
+ </script>
+</body>
+</html>
