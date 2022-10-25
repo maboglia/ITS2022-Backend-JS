@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+    
+         //$('#esempio p').wrap('<div style="border:1px solid red"/>')
+         //$('#esempio p').wrapAll('<div style="border:1px solid red"/>')
+         //$('#esempio').empty()
+//         $('#esempio p.a, #esempio p.b').remove()
+         $('<h2>prova</h2>').replaceAll('#esempio p.a, #esempio p.b')
+         $('#esempio p[id]').replaceWith("<div>replaced</div>")
+        })
+</script>
+
+</head>
+<body>
+    <h1>Prima pagina jquery</h1>
+    <div id="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse aperiam veritatis accusamus, maxime ea earum rem quasi distinctio pariatur dignissimos possimus laborum. Omnis quod sapiente quam ipsam eos impedit laudantium?</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et soluta, alias modi repellendus aliquid officia iusto quidem dolorum necessitatibus harum ipsum mollitia accusantium doloremque architecto impedit enim sit at molestias?</p>
+
+        <ul id="list1">
+
+            <li class="a"><code>$(selettore)</code>: <p>prova</p>serve per blabla</li>
+            <li class="a"><code>$(selettore2)</code>: serve2 per blabla</li>
+            <li class="b"><code>$(selettore1)</code>: serve1 per blabla</li>
+            <li class="b"><code>$(selettore3)</code>: serve3 per blabla</li>
+
+        </ul>
+
+        <div id="esempio">
+
+            <p class="a">Paragrafo 1</p>
+            <p id="para2">Paragrafo 2</p>
+            <p class="b">Paragrafo 3</p>
+            <p id="para4" lang="en-us">Paragrafo 4</p>
+            <p id="para5" lang="en-gb">Paragrafo 5</p>
+
+        </div>
+
+        <div>
+            <button id="create">Crea contenuto</button>
+            <button id="change">Cambia contenuto</button>
+            <button id="changeAll">Cambia tutto</button>
+
+        </div>
+    </div>
+</body>
+</html>

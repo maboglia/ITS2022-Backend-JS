@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            // $("#immagini").after("<p id='testi'>")
+
+            // $('img').each(function () {
+            //     $("#testi").append($(this).attr('alt')+'<br>')
+            // })
+
+            // // $("#immagini a").attr("title", "opera di banksy")
+            // // $("#immagini a").attr("target", "_blank")
+            // $("#immagini a").attr({target: "_blank", title: "opera di banksy"})
+
+            // alert($('img:first').offset().left)
+
+                $('.a').on('click', function(){
+                    $(this).toggleClass('b')
+                })
+
+        })
+</script>
+<style>
+    .a {color: blueviolet;}
+    .b {background-color: brown;}
+</style>
+</head>
+<body>
+    <h1>Prima pagina jquery</h1>
+    <div id="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse aperiam veritatis accusamus, maxime ea earum rem quasi distinctio pariatur dignissimos possimus laborum. Omnis quod sapiente quam ipsam eos impedit laudantium?</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et soluta, alias modi repellendus aliquid officia iusto quidem dolorum necessitatibus harum ipsum mollitia accusantium doloremque architecto impedit enim sit at molestias?</p>
+
+        <ul id="list1">
+
+            <li class="a"><code>$(selettore)</code>: <p>prova</p>serve per blabla</li>
+            <li class="a"><code>$(selettore2)</code>: serve2 per blabla</li>
+            <li class="b"><code>$(selettore1)</code>: serve1 per blabla</li>
+            <li class="b"><code>$(selettore3)</code>: serve3 per blabla</li>
+
+        </ul>
+
+        <div id="esempio">
+
+            <p class="a">Paragrafo 1</p>
+            <p id="para2">Paragrafo 2</p>
+            <p class="b">Paragrafo 3</p>
+            <p id="para4" lang="en-us">Paragrafo 4</p>
+            <p id="para5" lang="en-gb">Paragrafo 5</p>
+
+        </div>
+
+        <div id="immagini">
+            <a href="img/b1.jpg"><img src="img/b1.jpg" alt="polvere"></a>
+            <a href="img/b2.jpg"><img src="img/b2.jpg" alt="cuore"></a>
+            <a href="img/b3.jpg"><img src="img/b3.jpg" alt="fiori"></a>
+        </div>
+    </div>
+</body>
+</html>
