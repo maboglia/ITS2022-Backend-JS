@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script>
+
+        $.getJSON( "http://localhost:8080/api/script2.php", function( data ) {
+        var items = [];
+        $.each( data, function( key, val ) {
+            console.log(key, val);
+            items.push( "<li id='" + key + "'>" + val.marca + val.modello+ "</li>" );
+        });
+        
+        $( "<ul/>", {
+            "class": "my-new-list",
+            html: items.join( "" )
+        }).appendTo( "body" );
+        });
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

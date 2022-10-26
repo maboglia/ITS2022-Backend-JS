@@ -5,27 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <style type="text/css">
+        .blocco{ width: 500px; height:350px; overflow: hidden;}
+        .blocco img{ width: 500px; height:350px; float: left;}
+        </style>
+        
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
-            $('#show').click(function () {
-                $('#immagini img:first').animate({
-                    width: 50+'%',
-                    margin: 200+"px"
-                },
-                    2500).animate({marginTop:-100+'px'})
-            })
+            // $('#show').click(function () {
+            //     $('#immagini img:first').animate({
+            //         width: 50+'%',
+            //         margin: 200+"px"
+            //     },
+            //         2500).animate({marginTop:-100+'px'})
+            // })
 
-            $('#hide').click(function () {
-                $('#immagini').slideUp(1000, 'swing')
-            })
+            // $('#hide').click(function () {
+            //     $('#immagini').slideUp(1000, 'swing')
+            // })
 
-            $('#toggle').click(function () {
-                $('#immagini').slideToggle('slow', 'swing', function () {
-                    alert('finito')
-                })
-            })
+            // $('#toggle').click(function () {
+            //     $('#immagini').slideToggle('slow', 'swing', function () {
+            //         alert('finito')
+            //     })
+            // })
+
+            
+$(function(){
+    var i = 0;
+$('#blocco img:gt(0)').hide();
+setInterval(
+    function(){ 
+        console.log('test ' + i++);
+        $('#blocco :first-child')
+            .fadeOut(20)
+            .next('img')
+            .fadeIn(700)
+            .end()
+            .appendTo($('#blocco'));
+        }, 
+    1000);
+});
 
 
 
@@ -66,7 +87,7 @@
             <button id="hide">nascondi</button>
             <button id="toggle">toggle</button>
         </div>
-        <div id="immagini">
+        <div id="blocco">
             <a href="img/b1.jpg"><img src="img/b1.jpg" alt="polvere"></a>
             <a href="img/b2.jpg"><img src="img/b2.jpg" alt="cuore"></a>
             <a href="img/b3.jpg"><img src="img/b3.jpg" alt="fiori"></a>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $( document ).ajaxStart(function() {
+                alert("Start" );
+            });
+            
+            $( document ).ajaxStop(function() {
+                alert("Stop" );
+            });
+            
+            $( document ).ajaxSend(function() {
+                alert("Send" );
+            });
+            
+            $( document ).ajaxComplete(function() {
+                alert("Complete" );
+            });
+            
+            $( document ).ajaxSuccess(function() {
+                alert("Success" );
+            });
+            
+            $( document ).ajaxError(function(event, jqxhr, settings, thrownError) {
+                alert("Error" );
+                console.log(event, jqxhr, settings, thrownError);
+            });
+            
+
+
+            $('#output').load('http://localhost:8080/api/script5.php')
+
+
+        })
+
+    </script>
+
+</head>
+<body>
+    
+    <div id="output"></div>
+
+</body>
+</html>
