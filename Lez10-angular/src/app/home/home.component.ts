@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  contatore: number = 0;
+
+  incrementa(){
+    this.contatore += 1;
+  }
+
+
   constructor() { }
 
   ngOnInit(): void {
