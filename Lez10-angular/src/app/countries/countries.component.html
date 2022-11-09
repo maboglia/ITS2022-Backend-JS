@@ -1,1 +1,9 @@
-<p>countries works!</p>
+
+<ul *ngIf="paesi">
+    <li *ngFor="let paese of paesi">
+        <p class="name">{{ paese.name.common }}</p>
+        <p class="capitale"> {{ paese.capital}}</p>
+        <img [src]="paese.flags.png">
+    </li>
+</ul>
+

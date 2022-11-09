@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-countries',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CountriesComponent implements OnInit {
 
-  constructor() { }
+  paesi: any;
+
+  constructor(private _http: HttpService) { }
 
   ngOnInit(): void {
+    this._http.getCountries().subscribe(data => {
+      this.paesi = data;
+      console.log(this.paesi);
+      
+    });
+
+    
   }
 
 }

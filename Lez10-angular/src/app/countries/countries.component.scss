@@ -1,0 +1,35 @@
+
+ul{
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        background-color: cornflowerblue;
+        padding: 1em;
+        margin-right: 10px;
+        width: 20%;
+        height: 250px;
+        margin-bottom: 1em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    p {margin:0;}
+    p.name {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    p.capital{
+        font-size: 0.9rem;
+    }
+
+    img {
+        width: 90%;
+        max-height: 100px;
+    }
+}
