@@ -6,11 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CorsiComponent } from './corsi/corsi.component';
 import { ElencoService } from './elenco.service';
+import { MenuComponent } from './menu/menu.component';
+import { CountriesComponent } from './countries/countries.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CorsiComponent
+    CorsiComponent,
+    MenuComponent,
+    CountriesComponent
   ],
   imports: [
     BrowserModule,
