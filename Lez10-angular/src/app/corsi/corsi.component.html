@@ -1,4 +1,17 @@
 
+<!-- interpolation -->
+<img src="{{ imageUrl }}">
+<!-- property binding -->
+<img [src]="imageUrl">
+
+<button class="btn btn-primary" [style.backgroundColor]="isActive ? 'yellow' : 'red' " (click)="schiaccia($event)">schiacciami</button>
+
+<a href="#" (click)="schiaccia($event)">premi qui</a>
+
+<input type="text" [(ngModel)]="email" (keyup.enter)="onKeyUp()">
+
+<h2>{{email}}</h2>
+
 <ul>
     <li *ngFor="let corso of listaCorsi">{{ corso }}</li>
 </ul>
