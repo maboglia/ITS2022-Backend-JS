@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   contatore: number = 0;
+  paese: string = 'Italia';
+
 
   incrementa(){
     this.contatore += 1;
