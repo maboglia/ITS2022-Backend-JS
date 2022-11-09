@@ -1,2 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+
+$colore: #FF3300;
+
+header {
+    background-color: $colore;
+    padding: 1em 0;
+
+    a {
+        color: beige;
+        text-decoration: none;
+    }
+
+    a.logo {
+        font-weight: bold;
+    }
+
+    nav {
+        float: right;
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+
+            li a {
+                padding: 1em;
+
+                &:hover {
+                    background: darken($colore, 10%);
+                }
+            }
+        }
+    }
+
+}

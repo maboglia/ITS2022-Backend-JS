@@ -8,13 +8,15 @@ import { CorsiComponent } from './corsi/corsi.component';
 import { ElencoService } from './elenco.service';
 import { MenuComponent } from './menu/menu.component';
 import { CountriesComponent } from './countries/countries.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CorsiComponent,
     MenuComponent,
-    CountriesComponent
+    CountriesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
